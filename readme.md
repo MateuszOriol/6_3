@@ -1,6 +1,6 @@
-docker run --name my-postgres-container -e POSTGRES_PASSWORD=mysecretpassword -d postgres
+docker run --name postgres-c -e POSTGRES_PASSWORD=mysecretpassword -d postgres
 
-docker build -t my-express-app .
+docker build -t express-a .
 docker run -p 3000:3000 --link my-postgres-container my-express-app
 
 Wyświetlenie wszystkich danych w tabeli: GET http://localhost:3000/data
